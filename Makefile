@@ -7,16 +7,12 @@ CXXFLAGS ?= -g -Wall -O2
 CARGO ?= cargo
 RUSTFLAGS ?= -g
 
-# this target should build all executables for all tests
-all:
-	@echo "Please set a concrete build command here"
-	false
 
-#all: libmymalloc.so
+all: libmymalloc.so
 
 # C example:
-#libmymalloc.so: task5-memory.c
-#	$(CC) $(CFLAGS) -shared -fPIC -ldl -o $@ $<
+libmymalloc.so: task5-memory.c
+	$(CC) $(CFLAGS) -shared -fPIC -ldl -o $@ $<
 
 # C++ example:
 #task5-memory:
